@@ -8,12 +8,12 @@
     <div class="row justify-center q-gutter-sm">
       <q-card v-for="sample in samples" bordered class="card col-xs-12 col-md-3" :key="sample.id" v-anime="{ 
   translateY: {
-    value:    ['100px', '0px'],
+    value:    ['70px', '0px'],
     duration: 4000,
     easing: 'easeOutBounce',
   },
   translateY: {
-    value:    ['0px', '100px'],
+    value:    ['0px', '70px'],
     duration: 4000,
   } 
    }">
