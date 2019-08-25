@@ -1,19 +1,20 @@
 <template>
   <q-page class="text-center background-logo">
-    <div class="row justify-center">
+    <div class="row justify-center margin-top margin-bot">
       <div class="col-xs-12">
-        <h2>Ebenezer Websites LLC Sample Site Portal</h2>
+        <big>Ebenezer Websites LLC Sample Site Portal</big>
       </div>
     </div>
     <div class="row justify-center q-gutter-sm">
-      <q-card v-for="sample in samples" bordered class="card col-xs-12 col-md-3" :key="sample.id" v-anime="{ 
+      <!-- START DESKTOP -->
+      <q-card v-for="sample in samples" bordered class="card col-xs-10 col-sm-5 col-md-3 desktop-only" :key="sample.id" v-anime="{ 
   translateY: {
-    value:    ['70px', '0px'],
+    value:    ['100px', '0px'],
     duration: 4000,
     easing: 'easeOutBounce',
   },
   translateY: {
-    value:    ['0px', '70px'],
+    value:    ['0px', '100px'],
     duration: 4000,
   } 
    }">
@@ -30,6 +31,33 @@
           </a>
         </q-card-section>
       </q-card>
+<!-- END DESKTOP -->
+      <!-- START MOBILE -->
+      <q-card v-for="sample in samples" bordered class="card col-xs-10 col-sm-5 col-md-3 mobile-only margin-bot" :key="sample.id" v-anime="{ 
+        translateY: {
+          value:    ['10px', '0px'],
+          duration: 4000,
+          easing: 'easeOutBounce',
+        },
+        translateY: {
+          value:    ['0px', '10px'],
+          duration: 4000,
+        } 
+         }">
+        <q-card-section>
+          <div class="text-h6">{{sample.title}}</div>
+          <div class="text-subtitle2">{{sample.description}}</div>
+        </q-card-section>
+
+        <q-separator dark inset />
+
+        <q-card-section>
+          <a target="_blank" :href="sample.link">
+            <q-img :src="sample.img" :alt="sample.title" contain class="grow"></q-img>
+          </a>
+        </q-card-section>
+      </q-card>
+      <!-- END MOBILE -->
     </div>
 
   </q-page>
@@ -37,6 +65,12 @@
 
 <!-- Need to set transition speed to something longer somehow -->
 <style>
+  .margin-top{
+    margin-top:2rem;
+  }
+  .margin-bot{
+    margin-bottom:2rem;
+  }
   .grow {
     transition: all 0.35s ease-in-out;
   }
