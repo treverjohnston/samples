@@ -22,5 +22,12 @@ export default {
       link: 'https://ebenezerwebsites.com/',
       id: 1
     },
+    {
+      title: 'Sample Landing Page',
+      description: 'An example of a landing page created by Ebenezer Websites LLC',
+      img: './statics/pics/code.svg',
+      link: 'https://landing.ebenezerwebsites.com/',
+      id: 1
+    },
   ]
 }

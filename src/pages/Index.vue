@@ -7,7 +7,8 @@
     </div>
     <div class="row justify-center q-gutter-sm">
       <!-- START DESKTOP -->
-      <q-card v-for="sample in samples" bordered class="card col-xs-10 col-sm-5 col-md-3 desktop-only" :key="sample.id" v-anime="{ 
+      <q-card v-for="sample in samples" bordered class="card col-xs-10 col-sm-5 col-md-3 desktop-only" :key="sample.id"
+        v-anime="{ 
   translateY: {
     value:    ['100px', '0px'],
     duration: 4000,
@@ -31,9 +32,10 @@
           </a>
         </q-card-section>
       </q-card>
-<!-- END DESKTOP -->
+      <!-- END DESKTOP -->
       <!-- START MOBILE -->
-      <q-card v-for="sample in samples" bordered class="card col-xs-10 col-sm-5 col-md-3 mobile-only margin-bot" :key="sample.id" v-anime="{ 
+      <q-card v-for="sample in samples" bordered class="card col-xs-10 col-sm-5 col-md-3 mobile-only margin-bot"
+        :key="sample.id" v-anime="{ 
         translateY: {
           value:    ['10px', '0px'],
           duration: 4000,
@@ -59,18 +61,23 @@
       </q-card>
       <!-- END MOBILE -->
     </div>
-
+<div class="row justify-center spacer"></div>
   </q-page>
 </template>
 
 <!-- Need to set transition speed to something longer somehow -->
 <style>
-  .margin-top{
-    margin-top:2rem;
+  .spacer {
+    margin: 4rem 0 4rem 0;
   }
-  .margin-bot{
-    margin-bottom:2rem;
+  .margin-top {
+    margin-top: 2rem;
   }
+
+  .margin-bot {
+    margin-bottom: 2rem;
+  }
+
   .grow {
     transition: all 0.35s ease-in-out;
   }
